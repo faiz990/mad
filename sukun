@@ -1,0 +1,100 @@
+//Toast(untuk notification)
+
+public void toastAction (View view){
+Toast toast = Toast. makeText( context: this, text: "You have clicked Me!", Toast.LENGTH SHORT);
+toast.show();
+
+
+//Intent to open website
+
+public void gotowebsite(View view){
+Intent intent = new Intent (Intent.ACTION VIEW, Uri.parse("http: ("));
+
+
+//Intent to open website
+
+public void gotowebsite(View view){
+Intent intent = new Intent (Intent.ACTION VIEW, Uri.parse("http: (/ww.msn.com"));
+
+startActivity(intent);
+
+Search website
+
+public void gotowebsite(View view){
+edwebsite = (EditText) findviewById(R.id.edwebsite);
+String strwebsite = edwebsite.getText).tostring
+Intent intent - new Intent(Intent.ACTION VIEW, Ur1.parse("http://" + strwebsite.trim()));
+startActivity(intent);
+
+//Intent to dialnumber
+
+public void dialMyNumber (View view)
+Intent intent = new Intent (Intent.ACTION DIAL, Uri.parse("tel:+60123456786*));
+startActivity(intent);
+
+//Set permission kalau call number
+
+<uses-permission android:name-"android.permission.CALL PHONE" />
+
+//Set permission kalau set gps
+
+‹uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+//Intent to location 
+
+public void openLocation (View view){
+Intent intent = new Intent (Intent.ACTION VIEW, Uri-parse("geo:1.6730796,110.2055148"));
+startActivity(intent);
+
+//Go to next page 
+
+public void clickiext(View v) {
+Intent intent;
+intent = new Intent ( packageContext: this, SecondActivity.class);
+this.startActivity(intent);
+
+
+//Bundle data transfer untuk first page
+
+public void clickNext (View V) {
+Intent intent;
+intent = new Intent( packageContext this, SecondActivity.class);
+Bundle bundle = new Bundle();
+
+edName - (EditText) findviewById(R.id. edName);
+edEmel = (EditText) findviewById(R.id.edEmel);
+rg - (RadioGroup) findviewById(R.id.radioGroup);
+int checkedId = rg.getCheckedRadioButtonId();
+rb = (RadioButton) findviewById (checkedId);
+
+String name = edName-getText().toString();
+String emel = edEmel.getText().toString();
+String gender = rb.getText().toString();
+
+bundle.putString("Name",name);
+bundle.putString("Emel", emel);
+bundle.putString("Gender", gender);
+
+intent.putExtras(bundle);
+this.startActivity(intent);
+
+//Bundle data transfer untuk second page
+
+tv = (TextView)findviewById(R.id.textview2);
+
+//Bundle bundle = getIntent().getExtras();
+
+String name = String.valueof(bundle.getCharSequence(key:
+"Name" )) ;
+String emel = String. valueOf(bundle-getCharSequence(key:
+"Emel"));
+String gender = String.value0f(bundle.getCharSequence( key: "Gender”));
+
+tv.setText (*Your name is "+name+" and your email is "temel +" and your gender is "+ gender);
+
+//Go to next page 
+
+public void clicknext(View v) {
+Intent intent;
+intent = new Intent ( packageContext: this, SecondActivity.class);
+this.startActivity(intent);
